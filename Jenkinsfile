@@ -16,4 +16,9 @@ node ("master") {
             image.push()
         }
     }
+
+    stage ("trigger dependant builds") {
+        build job: "docker-build-mpd"
+        build job: "docker-build-qbittorrent"
+    }
 }
