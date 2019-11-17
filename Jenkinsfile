@@ -17,8 +17,8 @@ node ("master") {
         }
     }
 
-    stage ("trigger dependant builds") {
-        build job: "docker-build-mpd"
-        build job: "docker-build-qbittorrent"
-    }
+    // stage ("trigger dependant builds") {
+    //     build job: "docker-build-mpd"
+    //     build job: "docker-build-qbittorrent"
+    // }
 }
